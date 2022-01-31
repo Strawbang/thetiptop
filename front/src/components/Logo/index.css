@@ -1,0 +1,32 @@
+.boxLogo {
+    height: 129px;
+    width: 193px;
+    background: #FFFFFF;
+}
+.logo {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .boxLogo {
+        height: 129px;
+        width: 95px;
+        background: #FFFFFF;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .boxLogo {
+        height: 129px;
+        width: 95px;
+        background: #FFFFFF;
+    }
+}

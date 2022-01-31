@@ -1,0 +1,33 @@
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.dashboard .row {
+  display: flex;
+}
+
+
+
+/* TABLETS */
+@media only screen and (max-width: 1200px) {
+    
+}
+/* MAJOR BREAKPOINT */
+@media only screen and (max-width: 720px) {
+
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px) {
+  #root {
+    font-size: 12px;
+  }
+}
+/* MINOR BREAKPOINT */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* SMALL PHONE */
+@media only screen and (max-width: 425px) {
+	
+}

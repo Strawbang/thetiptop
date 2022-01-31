@@ -1,0 +1,21 @@
+
+.boxAdressForm {
+  margin-left: 20px;
+}
+.adressForm {
+  display: flex;
+  place-content: space-evenly;
+  margin-bottom: 20px;
+}
+.adressField {
+  width: 40%;
+}
+
+.adressFieldSmall {
+  width: 20%;
+}
+
+.adressSubmitForm {
+  float: right;
+  margin: 50px 20px 0px 0px;
+}

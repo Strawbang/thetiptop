@@ -1,0 +1,96 @@
+@import '../../assets/css/colors.scss';
+
+.card {
+    background-color: white;
+    border-radius: 0.3rem;
+    height: auto;
+    width: auto;
+    flex-basis: 15rem;
+    margin: 2rem 0.5rem 0 0.5rem;
+    padding: 1rem;
+    box-shadow: rgba(124, 126, 128, 0.45) 0px 8px 10px;
+
+    &.users {
+        flex-grow: 0;
+    }
+    
+    &.tickets {
+        flex-grow: 0;
+    }
+
+    .content {
+        .name {
+            h2 {
+                text-align: center;
+            }
+        }
+        .preview-data {
+            margin-bottom: 0.5rem;
+
+            .count {
+                font-size: 4rem;
+                text-align: center;
+            }
+            .count, .full, .abbr {
+                color: $ttt-darkgreen;
+            }
+            .claimed-count, .printed-count {
+                text-align: center;
+
+                span {
+                    font-size: 2rem;
+                }
+            }
+            .abbr {
+                display: none;
+            }
+        }
+
+        a {
+            color: #415D51;
+            display: block;
+            text-decoration: underline;
+            text-align: center;
+            width: 100%;
+    
+            &:hover {
+                color: $ttt-orange;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+/* TABLETS */
+@media only screen and (max-width: 1200px) {
+    
+}
+/* MAJOR BREAKPOINT */
+@media only screen and (max-width: 720px) {
+    .card {
+        .content .preview-data {
+            .full {
+                display: none;
+            }
+            .abbr{
+                display: block;
+            }
+        }
+    }
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px) {
+
+}
+/* MINOR BREAKPOINT */
+@media only screen and (max-width: 480px) {
+    .card {
+        flex-basis: 100%;
+    }
+}
+
+/* SMALL PHONE */
+@media only screen and (max-width: 425px) {
+	
+}

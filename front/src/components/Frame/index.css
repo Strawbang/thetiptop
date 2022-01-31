@@ -1,0 +1,65 @@
+/* DESKTOP */
+.boxFrame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemFrame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.frame {
+    margin: auto;
+    background-color: #FFFFFF;
+    opacity: 0.95;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.frameBorder {
+    height: 50px;
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .boxFrame {
+        background-image: none !important;
+    }
+    .frame {
+        background-color: rgb(5, 80, 20, 0.15);
+        margin: 20px auto;
+        max-width: 90%;
+        height: 100%;
+        top: none;
+        transform: none;
+        flex-wrap: wrap;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .boxFrame {
+        background-image: none !important;
+    }
+    .frame {
+        background-color: rgb(5, 80, 20, 0.15);
+        margin: 20px auto;
+        max-width: 90%;
+        height: 100%;
+        top: none;
+        transform: none;
+        flex-wrap: wrap;
+    }
+}

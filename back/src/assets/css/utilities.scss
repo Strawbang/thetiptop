@@ -1,0 +1,104 @@
+@import '../../assets/css/colors.scss'; 
+
+.clear {
+    clear: both;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+}
+
+form.ttt-form {
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    .error-msg {
+        display: none;
+        opacity: 0;
+        background-color: $ttt-error-bg;
+        padding: 0.5rem;
+        color: #8A0000;
+        margin-top: 0.5rem;
+        border-radius: 0.3rem;
+    }
+
+    .field {
+        margin-bottom: 1rem;
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            width: 100%;
+        }
+
+        input[type="text"], input[type="password"] {
+            border: 0px;
+            border-radius: 0.3rem;
+            margin-top: 0.5rem;
+            padding: 1rem;
+            width: 100%;
+            outline: none;
+            &:focus {
+                border: 1px solid black;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        button {
+            font-weight: 600;
+
+            &.submit {
+                background-color: $ttt-darkgreen;
+                color: white;
+                
+                .MuiCircularProgress-colorPrimary {
+                    color: white;
+                }
+            }
+        }
+
+        .error-msg {
+            flex: 0 0 100%;
+        }
+    }
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px) {
+    
+}
+/* MINOR BREAKPOINT */
+@media only screen and (max-width: 800px) {
+
+}
+/* MAJOR BREAKPOINT */
+@media only screen and (max-width: 720px) {
+
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px) {
+
+}
+/* MINOR BREAKPOINT */
+@media only screen and (max-width: 480px) {
+    form.ttt-form  {
+        .actions {
+            margin-top: -1rem;
+
+            button {
+                flex-basis: 100%;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+/* SMALL PHONE */
+@media only screen and (max-width: 425px) {
+	
+}

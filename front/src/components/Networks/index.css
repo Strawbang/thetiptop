@@ -1,0 +1,38 @@
+.boxNetworks {
+    width: 260px;
+    max-height: 145px;
+    margin: 12px 0px;
+}
+
+.itemNetworks {
+
+}
+
+.networks {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #FFFFFF;
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .boxNetworks {
+        width: 100%;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .boxNetworks {
+        width: 100%;
+    }
+}

@@ -1,0 +1,57 @@
+.boxPolitique {
+    max-width: 285px;
+    height: 145px;
+    margin: 12px 10px 12px 0px;
+    display: flex;
+}
+
+.itemPolitique {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.politique {
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 1s ease-out;
+}
+.politique:hover {
+    color:#DAB162;
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .boxPolitique {
+        max-width: 100%;
+        justify-content: center;
+        margin: 12px 0px 12px 0px;
+    }
+    .itemPolitique {
+        text-align: center;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	.boxPolitique {
+        max-width: 100%;
+        justify-content: center;
+        margin: 12px 0px 12px 0px;
+    }
+    .itemPolitique {
+        text-align: center;
+    }
+}

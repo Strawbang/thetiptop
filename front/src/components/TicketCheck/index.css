@@ -1,0 +1,77 @@
+form.ticket-check {
+    margin: auto;
+    padding: 10% 10px;
+    width: 50rem;
+    text-align: center;
+}
+
+form.ticket-check label {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form.ticket-check input {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+form.ticket-check input:focus {
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 2px 6px -1px cornflowerblue;
+}
+
+form.ticket-check button {
+    background-color: #dab162;
+    border-radius: 5px;
+    color: #574400;
+    display: block;
+    font-weight: 500;
+    margin: auto;
+    min-width: 150px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+form.ticket-check .error-msg {
+    display: none;
+    color: tomato;
+}
+form.ticket-check .error-msg.show {
+    display: block;
+}
+form.ticket-check .error-msg.showCenter {
+    text-align: center;
+    display: block;
+}
+.buttonTicket {
+    margin-top: 25px;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid #326148;
+    color: #326148;
+    height: 45px;
+    background-color: white;
+}
+
+.buttonTicket:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    form.ticket-check {
+        width: 100%;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+}

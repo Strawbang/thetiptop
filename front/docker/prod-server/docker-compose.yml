@@ -1,0 +1,31 @@
+version: '3.2'
+networks:
+    web:
+        external:
+            name: web
+    private:
+        external:
+            name: private
+services:
+    prod-front:
+        image: repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-front
+        environment:
+            - REACT_APP_API=https://api.dsp-archiwebo20-db-od-sn-bm.fr/api
+            - REACT_APP_PORT=3000
+            - ENV=production
+            - NODE_OPTIONS=--openssl-legacy-provider
+        ports: 
+            - 3000
+        networks: 
+            - web
+            - private
+        deploy:
+            placement:
+                constraints: [node.role == worker]
+            labels:
+                - traefik.enable=true
+                - traefik.http.routers.prod-front.tls=true
+                - traefik.http.routers.prod-front.rule=Host(`www.dsp-archiwebo20-db-od-sn-bm.fr`) || Host(`dsp-archiwebo20-db-od-sn-bm.fr`)
+                - traefik.http.routers.prod-front.entrypoints=websecure
+                - traefik.http.services.prod-front.loadbalancer.server.port=3000
+                - traefik.http.routers.prod-front.tls.certresolver=letsencrypt

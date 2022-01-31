@@ -1,0 +1,17 @@
+.confirmation-container {
+    margin: auto;
+    padding: 1rem 0;
+    width: 50%;
+}
+
+.confirmation-container .notice p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 640px) {
+    .confirmation-container {
+        margin: auto;
+        padding: 1rem 0.5rem;
+        width: 95%;
+    }
+}

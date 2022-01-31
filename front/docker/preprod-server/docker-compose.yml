@@ -1,0 +1,27 @@
+version: '3.2'
+networks:
+    web:
+        external:
+            name: web
+services:
+    preprod-front:
+        image: repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-front
+        environment:
+            - REACT_APP_API=https://api-preprod.dsp-archiwebo20-db-od-sn-bm.fr/api
+            - REACT_APP_PORT=3002
+            - ENV=preproduction
+            - NODE_OPTIONS=--openssl-legacy-provider
+        ports: 
+            - 3002
+        networks: 
+            - web
+        deploy:
+            placement:
+                constraints: [node.role == worker]
+            labels:
+                - traefik.enable=true
+                - traefik.http.routers.preprod-front.tls=true
+                - traefik.http.routers.preprod-front.rule=Host(`front-preprod.dsp-archiwebo20-db-od-sn-bm.fr`)
+                - traefik.http.routers.preprod-front.entrypoints=websecure
+                - traefik.http.services.preprod-front.loadbalancer.server.port=3002
+                - traefik.http.routers.preprod-front.tls.certresolver=letsencrypt

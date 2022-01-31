@@ -1,0 +1,16 @@
+.boxProfilForm {
+  margin-left: 20px;
+}
+.profilForm {
+  display: flex;
+  place-content: space-evenly;
+  margin-bottom: 20px;
+}
+.profilField {
+  width: 40%;
+}
+
+.profilSubmitForm {
+  float: right;
+  margin: 50px 20px 0px 0px;
+}

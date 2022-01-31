@@ -1,0 +1,58 @@
+/* DESKTOP */
+.boxFooter {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    bottom:0;
+}
+
+.footerInformation {
+
+}
+
+.footerMenu {
+
+}
+
+.footerNetworks {
+
+}
+
+.footerPolitique {
+    
+}
+
+.mobileSeparation {
+    display: none;
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+    .boxFooter {
+        flex-direction: column;
+    }
+    .mobileSeparation {
+        height: 2px;
+        background-color: #81A78C;
+        width: 80%;
+        border: none;
+        display: block;
+        margin: auto;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+    .boxFooter {
+        flex-direction: column;
+    }
+    .mobileSeparation {
+        height: 2px;
+        background-color: #81A78C;
+        width: 80%;
+        border: none;
+        display: block;
+    }
+}

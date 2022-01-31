@@ -1,0 +1,136 @@
+/* DESKTOP */
+.boxFAQ {
+    width: 100%;
+    height: auto;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.titleFAQ {
+    position: relative;
+    height: 200px;
+    width: 50%;
+}
+.frameTitleFAQ {
+    position: absolute;
+    top: 50%; /* poussé de la moitié de hauteur du référent */
+    transform: translateY(-50%);  /* tiré de la moitié de sa propre hauteur */
+    width: 100%;
+    background: #DAB162;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 5px 5px 0px;
+    /* text-align: center; */
+}
+.frameTitleFAQ p {
+    width: 50%;
+    margin-top: 17px;
+    font-size: 45px;
+    font-weight: normal;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.faq {
+    height: 80%;
+    display: flex;
+    font-size: 18px;
+    margin: 0px 30px;
+    text-align: justify;
+}
+.faqFirst{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.faqSecond{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.faqItem{
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.faqItem:hover{
+    background-color: rgba(129, 167, 140, 0.25);
+}
+.faqQuestion{
+    font-size: 20px;
+}
+.faqAnswer{
+    font-size: 16px;
+    color: #326148;
+    width: 90%;
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+    .titleFAQ {
+        width: 100%;
+    }
+    .faqQuestion{
+        font-size: 16px;
+    }
+    .faqAnswer{
+        font-size: 14px;
+    }
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .titleFAQ {
+        width: 100%;
+    }
+    .frameTitleFAQ p{
+        width: 100%;
+    }
+    .faq {
+        flex-direction: column;
+        font-size: 14px;
+        margin: 0px 10px;
+    }
+    .faqItem {
+        text-align: center;
+    }
+    .faqFirst{
+        width: 100%;
+    }
+    .faqSecond{
+        width: 100%;
+    }
+    .faqAnswer{
+        width: 100%;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+    .titleFAQ {
+        width: 100%;
+    }
+    .frameTitleFAQ p{
+        width: 100%;
+    }
+    .faq {
+        flex-direction: column;
+        font-size: 14px;
+        margin: 0px 10px;
+    }
+    .faqItem {
+        text-align: center;
+    }
+    .faqFirst{
+        width: 100%;
+    }
+    .faqSecond{
+        width: 100%;
+    }
+    .faqAnswer{
+        width: 100%;
+    }
+}

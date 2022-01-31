@@ -1,0 +1,61 @@
+node {
+    def branch;
+    def scmvar;
+    stage('Checkout'){
+        deleteDir();
+        scmvar = checkout scm;
+        branch = scmvar.GIT_BRANCH
+    }
+
+    stage('Check Branch'){
+        if(branch.contains('origin/feature') || branch.contains('origin/fix')){
+            stage('Build image dev-back'){
+                imageback     = docker.build("dev-back", "-f docker/dev-server/Dockerfile .");
+            }
+
+            stage('Build image prod-back'){
+                imageFront     = docker.build("prod-back", "-f docker/prod-server/Dockerfile .");
+            }
+
+            stage('Publish to Nexus Repository Manager'){
+                sh 'docker tag dev-back:latest repo.dsp-archiwebo20-db-od-sn-bm.fr/dev-back:latest'
+                sh 'docker tag prod-back:latest repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-back:latest'
+                sh 'docker login --username jenkins-user --password jenkins  repo.dsp-archiwebo20-db-od-sn-bm.fr'
+                sh 'docker push repo.dsp-archiwebo20-db-od-sn-bm.fr/dev-back:latest'
+                sh 'docker push repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-back:latest'
+            }
+
+            stage('Deploy stack dev-back'){
+                sh 'docker login --username jenkins-user --password jenkins repo.dsp-archiwebo20-db-od-sn-bm.fr'
+                sh 'docker stack rm dev-back'
+                sh 'docker stack deploy --with-registry-auth --compose-file docker/dev-server/docker-compose.yml dev-back'
+            }
+        }
+        if(branch == 'origin/develop'){
+            stage ('Pull to Nexus Repository Manager'){
+                sh 'docker login --username jenkins-user --password jenkins  repo.dsp-archiwebo20-db-od-sn-bm.fr'
+                sh 'docker pull repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-back:latest'
+            }
+
+            stage('Deploy stack preprod-back'){
+                sh 'docker login --username jenkins-user --password jenkins repo.dsp-archiwebo20-db-od-sn-bm.fr'
+                sh 'docker stack rm preprod-back'
+                sh 'docker stack deploy --with-registry-auth --compose-file docker/preprod-server/docker-compose.yml preprod-back'
+            }
+        }
+
+        if(branch == 'origin/master'){
+            stage ('Pull to Nexus Repository Manager'){
+                sh 'docker login --username jenkins-user --password jenkins  repo.dsp-archiwebo20-db-od-sn-bm.fr'
+                sh 'docker pull repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-back:latest'
+            }
+
+            stage('Deploy stack prod-back'){
+                sh 'docker login --username jenkins-user --password jenkins repo.dsp-archiwebo20-db-od-sn-bm.fr'
+                sh 'docker stack rm prod-back'
+                sh 'docker stack deploy --with-registry-auth --compose-file docker/prod-server/docker-compose.yml prod-back'
+            }
+        }
+    }
+    
+}

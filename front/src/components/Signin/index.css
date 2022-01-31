@@ -1,0 +1,191 @@
+.boxSignIn {
+  height: 900px;
+  width: 100%;
+  position: relative;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+}
+.frameSignIn {
+  width: 35%;
+  height: 70%;
+  margin: auto auto;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 35%);
+  opacity: 0.95;
+  border-radius: 20px;
+  position: relative;
+}
+
+.titleFrameSignIn {
+  margin-top: 25px;
+  position: relative;
+  height: 10%;
+  text-align: center;
+}
+.titleSignIn {
+  font-family: Montserrat, sans-serif;
+  color: #326148;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  width: 100%;
+}
+
+.formFrameSingIn {
+  height: 45%;
+}
+.formSingIn {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  place-content: space-evenly;
+  text-align: center;
+}
+.formFields{
+  width: 70%;
+  height: 44px;
+  background:white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+}
+input::-webkit-input-placeholder {/* Chrome/Opera/Safari/Edge */
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #81A78C;
+}
+
+.frameSignIn .error-msg {
+  display: none;
+  color: tomato
+}
+.frameSignIn .error-msg.show {
+  display: block;
+}
+
+.formInteraction {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0px auto;
+}
+.formInteractionPassword {
+  cursor: pointer;
+  width: 50%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  margin: auto;
+}
+.formInteractionButton {
+  width: 50%;
+}
+.formInteractionButton button {
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #326148;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #326148;
+}
+.formInteractionButton button:hover {
+  background: #326148;
+  color: #FFFFFF;
+}
+
+.socialSignIn {
+  padding-top: 20px;
+  height: 34%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-content: space-evenly;
+}
+.titleSocialSignIn {
+  font-size: 18px;
+  color: #326148;
+}
+.social-buttons {
+  position: relative;
+  left: -10px;
+  bottom: -10px;
+  width: calc(100% + 20px);
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+  /*Tablets [601px -> 1200px]*/
+  .frameSignIn {
+    width: auto;
+    padding: 10px;
+  }
+  .formInteraction {
+    flex-direction: column;
+  }
+  .formInteractionButton {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .formInteractionPassword {
+    width: 100%;
+  }
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px){
+/*Big smartphones [426px -> 600px]*/
+  .frameSignIn {
+    width: auto;
+    padding: 10px;
+  }
+  .formInteraction {
+    flex-direction: column;
+  }
+  .formInteractionButton {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .formInteractionPassword {
+    width: 100%;
+  }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+/*Small smartphones [325px -> 425px]*/
+  .titleSignIn {
+    font-size: 25px;
+  }
+  .frameSignIn {
+    width: auto;
+    padding: 10px;
+  }
+  .formInteraction {
+    flex-direction: column;
+  }
+  .formInteractionButton {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .formInteractionPassword {
+    width: 100%;
+  }
+  .titleSocialSignIn {
+    font-size: 16px;
+  }
+}

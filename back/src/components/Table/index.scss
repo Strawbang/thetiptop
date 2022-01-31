@@ -1,0 +1,83 @@
+@import '../../assets/css/colors.scss';
+
+.table-top, .table-bot {
+    .table-info {
+        margin-bottom: 0.5rem;
+    }
+    .table-nav ul {
+        justify-content: center;
+    }
+}
+
+.table-top {
+    margin-bottom: 0.5rem;
+}
+
+.table-bot {
+    margin-top: 0.5rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    box-shadow: rgba(124, 126, 128, 0.45) 0px 8px 10px;
+   
+    .top {
+        padding: 1rem 0.5rem;
+        display: none;
+    }
+
+    table {
+        background-color: white;
+        border-radius: 0.2rem;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    
+        thead th {
+            background-color: $ttt-green;
+        }
+    
+        th, td {
+            padding: 1rem;
+            
+            &:first-child {
+                position: sticky;
+                left: 0;
+            }
+
+            &:not(.row-actions) a {
+                color: initial;
+                text-decoration: underline;
+    
+                &:hover {
+                    color: $ttt-orange;
+                }
+            }
+    
+            svg {
+                cursor: pointer;
+    
+                &.edit{
+                    color: $ttt-orange;
+                }
+                
+                &.delete {
+                    color: $persianRed;
+                }
+            }
+        }
+    
+        tbody tr {
+            &:nth-child(odd) {
+                td {
+                    background-color: #eeeeee;
+                }
+            }
+            &:nth-child(even) {
+                td {
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+}

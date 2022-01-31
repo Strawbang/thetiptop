@@ -1,0 +1,77 @@
+/* DESKTOP */
+.boxStats {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    background-color: #326148;
+}
+.itemStats {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 0px 35px;
+    display: flex;
+    justify-content: space-around;
+}
+.stats {
+   width: 130px;
+   text-align: center;
+   margin: auto 0px;
+}
+
+.statsVal {
+    margin: 0px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.statsTitle {
+    margin: 0px;
+    font-family: Open, sans-serif;
+    font-style: bold;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .itemStats {
+        padding: 0px;
+    }
+    
+    .statsVal {
+        font-size: 14px;
+    }
+
+    .statsTitle {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+    .itemStats {
+        padding: 0px;
+    }
+    
+    .statsVal {
+        font-size: 14px;
+    }
+
+    .statsTitle {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

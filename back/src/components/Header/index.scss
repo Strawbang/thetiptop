@@ -1,0 +1,119 @@
+@import '../../assets/css/colors.scss';
+
+header {
+    background-color: white;
+    color:$ttt-darkgreen;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: grey 0px 0px 5px;
+
+    a, span.env, div.user {
+        padding: 1rem;
+    }
+
+    a {
+        color: $ttt-darkgreen;
+        text-decoration: none;
+    }
+
+    .dropdown {
+        position: relative;
+        
+        &:hover {
+            ul {
+                display: block;
+            }
+        }
+
+        div.user {
+            text-align: center;
+            
+            .user-icon {
+                margin-right: 0.5rem;
+            }
+            svg {
+                vertical-align: bottom;
+            }
+        }
+
+        ul {
+            background-color: white;
+            display: none;
+            margin-top: 0;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            width: auto;
+            z-index: 1;
+
+            li {
+                list-style-type: none;
+
+                &:last-child {
+                    border-top: 1px solid white;
+                }
+                
+                &.sign-out {
+                    a:hover {
+                        color: #574400;
+                        background-color: $ttt-orange;
+                    }
+                }
+
+                a {
+                    cursor: pointer;
+                    display: block;
+                    padding: 1rem;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: white;
+                        background-color: $ttt-green;
+                    }
+
+                    svg {
+                        vertical-align: bottom;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px) {
+    
+}
+/* MAJOR BREAKPOINT */
+@media only screen and (max-width: 720px) {
+
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px) {
+
+}
+/* MINOR BREAKPOINT */
+@media only screen and (max-width: 480px) {
+    header {
+        .env {
+            span {
+                display: none;
+            }
+        }
+
+        .dropdown .user {
+            .user-icon {
+                margin-right: 0;
+            }
+            
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+/* SMALL PHONE */
+@media only screen and (max-width: 425px) {
+	
+}

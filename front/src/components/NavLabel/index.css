@@ -1,0 +1,44 @@
+/* DESKTOP */
+.boxLabel {
+    width: 358px;
+    height: 59px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.navLabel {
+    width: 100%;
+    height: 100%;
+    font-family: Montserrat, sans-serif;;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .boxLabel {
+        width: 100%;
+    }
+    .navLabel {
+        font-size: 30px;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .boxLabel {
+        width: 100%;
+    }
+    .navLabel {
+        font-size: 30px;
+    }
+}

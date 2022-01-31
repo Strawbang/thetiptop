@@ -1,0 +1,26 @@
+version: '3.2'
+networks:
+    web:
+        external:
+            name: web
+services:
+    dev-front:
+        image: repo.dsp-archiwebo20-db-od-sn-bm.fr/dev-front
+        environment:
+            - REACT_APP_API=https://api-dev.dsp-archiwebo20-db-od-sn-bm.fr/api
+            - REACT_APP_PORT=3001
+            - ENV=development
+        ports: 
+            - 3001
+        networks: 
+            - web
+        deploy:
+            placement:
+                constraints: [node.role == worker]
+            labels:
+                - traefik.enable=true
+                - traefik.http.routers.dev-front.tls=true
+                - traefik.http.routers.dev-front.rule=Host(`front-dev.dsp-archiwebo20-db-od-sn-bm.fr`)
+                - traefik.http.routers.dev-front.entrypoints=websecure
+                - traefik.http.services.dev-front.loadbalancer.server.port=3001
+                - traefik.http.routers.dev-front.tls.certresolver=letsencrypt

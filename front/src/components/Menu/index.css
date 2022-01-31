@@ -1,0 +1,57 @@
+/* DESKTOP */
+.boxMenu {
+    max-width: 245px;
+    height: 145px;
+    margin: 12px 0px;
+}
+
+.itemMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu {
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 1s ease-out;
+}
+.menu:hover {
+    color:#DAB162;
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .boxMenu {
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .menu {
+        text-align: center;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	.boxMenu {
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .menu {
+        text-align: center;
+    }
+}

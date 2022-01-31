@@ -1,0 +1,70 @@
+@import '../../assets/css/colors.scss'; 
+
+form.ttt-form.add, form.ttt-form.edit {
+    width: 50%;
+
+    .field {
+        .checkboxes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+
+            > div:not(:last-child) {
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    .actions {
+        
+        button {
+            flex-basis: 45%;
+
+            &.return-to-list {
+                background-color: $ttt-orange;
+                color: $ttt-dark-orange;
+                a {
+                    text-decoration: none;
+                    color: $ttt-dark-orange;
+                }
+            }
+        }
+    }
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px) {
+    
+}
+/* MINOR BREAKPOINT */
+@media only screen and (max-width: 800px) {
+    form.ttt-form.add, form.ttt-form.edit {
+        width: 100%;
+    }
+}
+/* MAJOR BREAKPOINT */
+@media only screen and (max-width: 720px) {
+
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px) {
+
+}
+/* MINOR BREAKPOINT */
+@media only screen and (max-width: 480px) {
+    form.ttt-form.add, form.ttt-form.edit,  {    
+        .actions {
+            margin-top: -1rem;
+
+            button {
+                flex-basis: 100%;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+/* SMALL PHONE */
+@media only screen and (max-width: 425px) {
+	
+}

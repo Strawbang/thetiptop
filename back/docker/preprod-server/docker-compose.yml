@@ -1,0 +1,25 @@
+version: '3.2'
+networks:
+    web:
+        external:
+            name: web
+services:
+    preprod-back:
+        image: repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-back
+        environment:
+            - REACT_APP_API=https://api-preprod.dsp-archiwebo20-db-od-sn-bm.fr/api
+            - PORT=3101
+        ports: 
+            - 3101
+        networks: 
+            - web
+        deploy:
+            placement:
+                constraints: [node.role == worker]
+            labels:
+                - traefik.enable=true
+                - traefik.http.routers.preprod-back.tls=true
+                - traefik.http.routers.preprod-back.rule=Host(`back-preprod.dsp-archiwebo20-db-od-sn-bm.fr`)
+                - traefik.http.routers.preprod-back.entrypoints=websecure
+                - traefik.http.services.preprod-back.loadbalancer.server.port=3101
+                - traefik.http.routers.preprod-back.tls.certresolver=letsencrypt

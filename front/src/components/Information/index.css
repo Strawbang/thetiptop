@@ -1,0 +1,48 @@
+/* DESKTOP */
+.boxInformation {
+    max-width: 245px;
+    height: 145px;
+    margin-top: 12px;
+}
+
+.itemInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.information {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #FFFFFF;
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+    .boxInformation {
+        max-width: 100%;
+        margin: 12px 0px 12px 0px;
+    }
+    .information {
+        text-align: center;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .boxInformation {
+        max-width: 100%;
+        margin: 12px 0px 12px 0px;
+    }
+    .information {
+        text-align: center;
+    }
+}

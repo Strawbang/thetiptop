@@ -1,0 +1,25 @@
+version: '3.2'
+networks:
+    web:
+        external:
+            name: web
+services:
+    prod-back:
+        image: repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-back
+        environment:
+            - REACT_APP_API=https://api-dev.dsp-archiwebo20-db-od-sn-bm.fr/api
+            - PORT=3100
+        ports: 
+            - 3100
+        networks: 
+            - web
+        deploy:
+            placement:
+                constraints: [node.role == worker]
+            labels:
+                - traefik.enable=true
+                - traefik.http.routers.prod-back.tls=true
+                - traefik.http.routers.prod-back.rule=Host(`back.dsp-archiwebo20-db-od-sn-bm.fr`)
+                - traefik.http.routers.prod-back.entrypoints=websecure
+                - traefik.http.services.prod-back.loadbalancer.server.port=3100
+                - traefik.http.routers.prod-back.tls.certresolver=letsencrypt

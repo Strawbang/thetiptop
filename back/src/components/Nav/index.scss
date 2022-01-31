@@ -1,0 +1,81 @@
+@import '../../assets/css/colors.scss';
+
+.nav-sidebar {
+    background-color: $ttt-darkgreen;
+    flex: 0 1 auto;
+    min-height: 100vh;
+    padding: 1rem 0;
+
+    > a {
+        display: block;
+
+        img {
+            display: block;
+            margin: auto;
+            width: 80%;
+            background-color: white;
+            border-radius: 0.2rem;
+        }
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            
+            a {
+                color: white;
+                display: block;
+                padding: 1rem;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $ttt-darkgreen-hover;
+                }
+                
+                > div {
+                    display: inline-block;
+                }
+                
+                .nav-item-icon {
+                    vertical-align: middle;
+                    
+                    .svg {
+                        vertical-align: bottom;
+                    }
+                }
+
+                .nav-item-text {
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px) {
+    
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px) {
+    .nav-sidebar ul li a {
+        > div {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px) {
+	.nav-sidebar ul li a {
+        .nav-item-text {
+            display: none;
+        }
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px) {
+	
+}

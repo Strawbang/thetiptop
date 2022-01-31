@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+form label, form input:not([type="checkbox"]), form textarea {
+    display: block;
+    width: 100%;
+}
+
+form input:not([type="checkbox"]), form textarea {
+    background-color: whitesmoke;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+form input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+div.auth form input, form textarea {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+div.auth form button {
+    display: block !important;
+    cursor: pointer;
+    font-weight: 500 !important;
+    padding: 0.75rem 0.5rem !important;
+    text-transform: uppercase;
+}
+div.auth form button.Login {
+    background-color: #dab162 !important;
+    color: #574400;
+}
+
+div.auth .auth-options {
+    display: flex;
+    background-color: #326148;
+    align-items: start;
+}
+
+div.auth .frameSignIn {
+    width: 100%;
+}
+
+div.auth .boxSignIn, div.auth form.signup {
+    padding: 2rem 2rem;
+}
+
+div.auth .signup h2 {
+    text-align: center;
+}
+
+div.auth .auth-switch {
+    display: none;
+}
+div.auth .auth-switch .o-signin, div.auth .auth-switch .o-signup {
+    background-color: rgb(205,205,205);
+    cursor: pointer;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: center;
+    width: 50%;
+}
+div.auth.signin .auth-switch .o-signin, div.auth.signup .auth-switch .o-signup {
+    background-color: white;
+}
+
+div.auth form {
+    flex: 1 0 50%;
+}
+
+div.auth form label, div.auth form button {
+    margin-top: 1rem;
+}
+
+div.auth form input:focus {
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 2px 6px -1px cornflowerblue;
+}
+
+div.confirmation {
+    padding: 1rem;
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 720px) {
+    div.auth .boxSignIn {
+        display: none;
+    }
+    div.auth .auth-switch {
+        display: flex;
+    }
+    div.auth.signin .boxSignIn, div.auth.signup form.signup {
+        display: block;
+    }
+    div.auth.signup .boxSignIn, div.auth.signin form.signup {
+        display: none;
+    }
+    div.auth.signin .boxSignIn {
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 720px){
+    div.auth.signin .boxSignIn form input {
+        background-color: whitesmoke;
+    }
+    div.auth.signin .frameSignIn {
+        box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 35%);
+    }    
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    div.auth form {
+        padding: 0.5rem;
+    }
+    
+    div.auth button {
+        width: 100%;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+}

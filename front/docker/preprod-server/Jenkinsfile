@@ -1,0 +1,33 @@
+node {
+    
+    stage('Checkout'){
+        deleteDir();
+        checkout scm;
+    }
+    
+    stage('Stop stack preprod-front'){
+        sh 'docker stack ls | grep "workflow" -v | grep "preprod-back" -v | grep "preprod-api" -v | grep "dev" -v | grep "prod" -v | awk -F " " \'{ if (NR>1) print $1 }\' | xargs docker stack kill | xargs docker stack rm || true'
+        sh 'docker stack ls | grep "workflow" -v | grep "preprod-back" -v | grep "preprod-api" -v | grep "dev" -v | grep "prod" -v | awk -F " " \'{ if (NR>1) print $1 }\' | xargs docker stack rm || true'
+    }
+
+    // stage('Build image preprod-front'){
+    //     imageFront     = docker.build("preprod-front", "-f docker/preprod-server/Dockerfile .");
+    // }
+
+    // stage('Publish to Nexus Repository Manager'){
+    //     sh 'docker tag preprod-front:latest repo.dsp-archiwebo20-db-od-sn-bm.fr/preprod-front:latest'
+    //     sh 'docker login --username jenkins-user --password jenkins  repo.dsp-archiwebo20-db-od-sn-bm.fr'
+    //     sh 'docker push repo.dsp-archiwebo20-db-od-sn-bm.fr/preprod-front:latest'
+    // }
+
+    stage ('Pull to Nexus Repository Manager'){
+        sh 'docker login --username jenkins-user --password jenkins  repo.dsp-archiwebo20-db-od-sn-bm.fr'
+        sh 'docker pull repo.dsp-archiwebo20-db-od-sn-bm.fr/prod-front:latest'
+    }
+
+    stage('Deploy stack preprod-front'){
+        sh 'docker login --username jenkins-user --password jenkins repo.dsp-archiwebo20-db-od-sn-bm.fr'
+        sh 'docker stack deploy --with-registry-auth --compose-file docker/preprod-server/docker-compose.yml prod-front'
+    }
+    
+}

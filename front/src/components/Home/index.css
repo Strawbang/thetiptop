@@ -1,0 +1,242 @@
+/* DESKTOP */
+.thetiptop {
+	color: #326148
+}
+.boxHome {
+	width: 100%;
+	height: 100%;
+}
+.boxHomeMargin{
+	height: 5%;
+}
+.boxHomeMain {
+	width: 100%;
+	height: 85%;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: #FFFFFF;
+}
+
+/* ------------------------------------------------------------- */
+.carouselItemSection {
+	width: 50%;
+	margin: auto;
+	padding-left: 5%;
+}
+.carouselItems {
+	display: flex;
+	color: white;
+	height: 100%;
+	width: 100%;
+	margin: auto 0px;
+	text-align: right;
+	text-align: -webkit-right;
+}
+
+.carousel1Title {
+	padding: 10px;
+}
+.carousel1Title h1 {
+	font-weight: bold;
+	padding: 5px;
+	font-size: 80px;
+	background: linear-gradient(90deg, rgba(196, 196, 196, 0.06) 0%, rgba(32, 61, 48, 0.85) 80%);
+	border-radius: 10px 10px 0px 0px;
+	margin-bottom: 0;
+}
+.carousel1Title h2 {
+	border-radius: 0px 0px 10px 10px;
+	padding: 5px;
+	background: linear-gradient(90deg, rgba(196, 196, 196, 0.06) 0%, rgba(32, 61, 48, 0.85) 80%);
+	font-weight: bold;
+	font-size: 50px;
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+}
+.carousel1Title p {
+	padding: 5px;
+	border-radius: 10px;
+	inline-size: fit-content;
+	background: #FFFFFF;
+	color: #326148;
+	font-size: 25px;
+	font-weight: bold;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.carouselButton {
+	width: 200px;
+	background-color: #326148;
+	color: white;
+	border-radius: 10px;
+}
+/* .buttonParticipate {
+	width: 100%;
+	background-color: #81A78C;
+	color: white;
+} */
+
+.carouselContent {
+	padding: 10px;
+	margin-right: 15%;
+	text-align: center;
+}
+.carouselContent h1 {
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-size: 60px;
+	color: #326148;
+	border-radius: 10px;
+}
+.carouselContentFrame {
+	min-height: 425px;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(-90deg, rgba(196, 196, 196, 0.06) 0%, rgba(32, 61, 48, 0.85) 80%);
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+	justify-content: space-evenly;
+}
+.carouselContent p {
+	text-align: left;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFFFFF;
+}
+.carouselContentButton {
+	display: flex;
+	align-items: self-end;
+	position: relative;
+	width: 100%;
+	margin-top: 16px;
+	text-decoration: none;
+}
+.ContentButton {
+	justify-content: left;
+	width: 100%;
+	height: 50px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 10px;
+}
+.buttonHow {
+	width: auto;
+	background-color: #DAB162;
+	color: white;
+}
+/* ---------------------------------------------------------- */
+.boxHomeTitle {
+	width: 100%;
+	height: auto;
+}
+.homeGame {
+	vertical-align: middle;
+	width: 50%;
+	height: 80px;
+	background: #DAB162;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.homeInfos {
+	vertical-align: middle;
+	width: 50%;
+	height: 80px;
+	background: #326148;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.boxHomeContent td {
+	padding: 0px 40px;
+}
+.boxHomeContent h1 {
+	font-size: 35px;
+	font-family: Open, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+}
+.boxHomeContent p {
+	font-size: 18px;
+	font-family: Open, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	line-height: 19px;
+	margin: 0px;
+}
+span.firstGreen {
+	color: #FFFFFF;
+	font-size: 1.4em;
+	text-shadow: 2px 0 0 #81A78C, -2px 0 0 #81A78C, 0 2px 0 #81A78C, 0 -2px 0 #81A78C, 1px 1px #81A78C, -1px -1px 0 #81A78C, 1px -1px 0 #81A78C, -1px 1px 0 #81A78C;
+}
+
+.boxHomeContent h2 {
+	margin-top: 25px;
+	font-size: 22px;
+	text-align: center;
+	font-family: Open, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+}
+
+.boxHomeButton {
+	text-align: center;
+	margin-top: 50px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.howToButton {
+	text-decoration: none;
+	background-color:#DAB162;
+	box-sizing: border-box;
+	border-radius: 30px;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	align-items: center;
+	text-align: center;
+	padding: 10px 20px;
+	color: #FFFFFF;
+	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+.howToButton:hover{
+	color: #DAB162;
+	background-color:#FFFFFF;
+	cursor: pointer;
+}
+.participateButton {
+	text-decoration: none;
+	background-color:#326148;
+	box-sizing: border-box;
+	border-radius: 30px;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	align-items: center;
+	text-align: center;
+	padding: 10px 20px;
+	color: #FFFFFF;
+	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+.participateButton:hover{
+	color: #326148;
+	background-color:#FFFFFF;
+	cursor: pointer;
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+}
+

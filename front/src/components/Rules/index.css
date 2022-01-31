@@ -1,0 +1,53 @@
+/* DESKTOP */
+.boxRules {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: 80%;
+    background-color: white;
+}
+.itemRules {
+    width: 100%;
+    height: 100%;
+    padding: 0px 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.rules {
+    text-align: center;
+    margin: auto 0px;
+    transition: transform 250ms;
+}
+.rules:hover {
+    text-decoration: underline;
+    transform: translateY(-5px);
+}
+.rulesTitle {
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    color: #326148;
+    height: 60px;
+}
+/* TABLETS */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+/* BIG PHONE */
+@media only screen and (max-width: 720px){
+	/*Big smartphones [426px -> 600px]*/
+    .boxRules {
+        display: none;
+    }
+}
+/* SMALL PHONE */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .boxRules {
+        display: none;
+    }
+}
